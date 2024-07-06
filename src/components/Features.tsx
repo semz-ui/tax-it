@@ -1,7 +1,10 @@
-import { featuredData } from '../lib/featuresData';
-import { SingleFeaturedData } from '../types/types';
+import { SingleFeaturedData, FeaturedData } from '../types/types';
 
-const Features = () => {
+interface FeaturesProps {
+    data: FeaturedData;
+}
+
+const Features = ({ data }: FeaturesProps) => {
     return <div className="mt-20">
         <div className="flex flex-col items-center mx-2 sm:mx-0">
             <h1 className='font-extrabold text-3xl text-center'>Payments tools designed for you</h1>
@@ -9,7 +12,7 @@ const Features = () => {
         </div>
         <div className="mt-20 flex flex-wrap gap-6 items-center justify-center">
             {
-                featuredData.map((data: SingleFeaturedData) => (
+                data.map((data: SingleFeaturedData) => (
                     <div key={data.id} className="w-[300px] lg:w-[400px] h-72 lg:h-96 border rounded-xl flex flex-col justify-center px-6 gap-4">
                         <img src={data.icon} className='w-16' />
                         <h1 className='font-extrabold'>{data.title}</h1>

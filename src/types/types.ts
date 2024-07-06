@@ -24,3 +24,8 @@ export type SingleFeaturedData =
         description: string,
         icon: string,
     }
+
+export interface UserContextState {
+    userType: 'individual' | 'business';
+    setUserType: (type: 'individual' | 'business') => void;
+}

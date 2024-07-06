@@ -1,15 +1,18 @@
-import './App.css'
+import "./App.css";
 import "@fontsource/poppins";
-import IndividualPage from './pages/IndividualPage';
+import IndividualPage from "./pages/IndividualPage";
+import BusinessPage from "./pages/BusinessPage";
+import { useContext } from "react";
+import UserContext from "./context/UserContext";
 
 function App() {
+  const { userType } = useContext(UserContext);
 
   return (
-    <div className=''>
-      <IndividualPage />
-      {/* <div className='mb-[500px]' /> */}
+    <div className="">
+      {userType === "individual" ? <IndividualPage /> : <BusinessPage />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
