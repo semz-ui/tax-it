@@ -2,7 +2,6 @@ import Logo from "@/assets/images/logo.svg";
 import { Button } from "./Button";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
-import NavBar from "./NavBar";
 
 const Header = () => {
   const { userType, setUserType } = useContext(UserContext);
