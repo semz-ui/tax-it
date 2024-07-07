@@ -22,8 +22,8 @@ const Features = ({ data }: FeaturesProps) => {
             key={data.id}
             className="w-[300px] lg:w-[400px] h-72 lg:h-96 border rounded-xl flex flex-col justify-center px-6 sm:px-10 gap-4"
           >
-            <img src={data.icon} className="w-16" />
-            <h1 className="font-bold">{data.title}</h1>
+            <img src={data.icon} alt={data.title} className="w-16" />
+            <h1 className="font-medium">{data.title}</h1>
             <p className="font-extralight text-sm sm:text-base text-gray-400">
               {data.description}
             </p>

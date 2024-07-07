@@ -1,5 +1,4 @@
 import "./App.css";
-import "@fontsource/poppins";
 import IndividualPage from "./pages/IndividualPage";
 import BusinessPage from "./pages/BusinessPage";
 import { useContext } from "react";

@@ -14,7 +14,7 @@ const BusinessBanner = () => {
         </p>
         <Button title="Create free account" />
       </div>
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 translate-y-[550px] md:translate-y-[650px] lg:translate-y-[600px]">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 translate-y-[470px] md:translate-y-[600px]">
         <img src={bannerImg} />
       </div>
     </>

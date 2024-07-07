@@ -14,7 +14,7 @@ const Header = () => {
       {/* large screen */}
       <div className="hidden lg:flex justify-between px-8 items-center">
         <div className="flex gap-8 items-center">
-          <img src={Logo} className="cursor-pointer" />
+          <img src={Logo} alt="logo" className="cursor-pointer" />
           <p
             onClick={changeUser}
             className={`cursor-pointer ${
@@ -41,12 +41,6 @@ const Header = () => {
         </div>
       </div>
       {/* mobile screen */}
-      <div className="flex justify-between h-20 px-3 lg:hidden">
-        <img src={Logo} className="cursor-pointer w-20" />
-        <div className="flex gap-8 items-center">
-          <NavBar />
-        </div>
-      </div>
     </>
   );
 };

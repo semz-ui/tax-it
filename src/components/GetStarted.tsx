@@ -21,7 +21,7 @@ const GetStarted = () => {
             <div>
               {getStartedData.slice(0, 4).map((data: SingleGetStartedData) => (
                 <div key={data.id} className="flex flex-col gap-2 mb-6 mt-3">
-                  <h1 className="font-semibold">{data.title}</h1>
+                  <h1 className="font-semibold text-gray-600">{data.title}</h1>
                   <p className="font-extralight text-sm text-gray-400">
                     {data.description}
                   </p>
@@ -30,15 +30,20 @@ const GetStarted = () => {
             </div>
           </div>
           <div className="w-full sm:w-1/2 mt-5 sm:mt-0">
-            <img src={img} className="" />
-            <img src={img3} className="absolute right-0 -z-10 -mt-80" />
-            <img
-              src={img4}
-              className="absolute right-0 -z-10 -mt-96 sm:-mt-[415px]"
-            />
+            <img src={img} alt="tax it image" />
           </div>
         </>
       )}
+      <img
+        src={img3}
+        alt="round green circle"
+        className="absolute right-0 -z-10 mt-0 sm:mt-[700px]"
+      />
+      <img
+        src={img4}
+        alt="stripe green circle"
+        className="absolute right-0 -z-10 mt-0 ml-0 sm:mt-[580px]"
+      />
       {userType === "business" && (
         <>
           <div className="w-full md:w-1/2 flex">
@@ -51,7 +56,7 @@ const GetStarted = () => {
                   key={data.id}
                   className="flex flex-col gap-2 mb-6 lg:mt-3 lg:w-2/3"
                 >
-                  <h1 className="font-semibold">{data.title}</h1>
+                  <h1 className="font-semibold text-gray-600">{data.title}</h1>
                   <p className="font-extralight text-sm text-gray-400">
                     {data.description}
                   </p>
@@ -60,12 +65,17 @@ const GetStarted = () => {
             </div>
           </div>
           <div className="w-full sm:w-1/2 mt-5 sm:mt-0">
-            <img src={img2} />
-            <img src={img3} className="absolute right-0 -z-10 -mt-80" />
+            <img src={img2} alt="to wallet" />
+            {/* <img
+              src={img3}
+              className="absolute right-0 -z-10 -mt-80"
+              alt="round green circle"
+            />
             <img
               src={img4}
               className="absolute right-0 -z-10 -mt-96 sm:-mt-[415px]"
-            />
+              alt="stripe green circle"
+            /> */}
           </div>
         </>
       )}
