@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BottomBanner from "../components/BottomBanner";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
@@ -9,6 +10,9 @@ import { BusinnessFeaturedData } from "../lib/featuresData";
 import Logo from "@/assets/images/logo.svg";
 
 const BusinessPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="flex justify-between h-20 px-3 lg:hidden fixed w-full top-0 bg-black z-50">

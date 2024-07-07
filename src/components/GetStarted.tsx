@@ -9,7 +9,6 @@ import UserContext from "../context/UserContext";
 
 const GetStarted = () => {
   const { userType } = useContext(UserContext);
-  console.log(userType);
   return (
     <div className="mx-5 mt-20 flex flex-wrap items-center justify-center ">
       {userType === "individual" && (

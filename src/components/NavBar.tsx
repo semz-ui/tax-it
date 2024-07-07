@@ -13,8 +13,17 @@ import { useContext } from "react";
 
 const NavBar = () => {
   const { userType, setUserType } = useContext(UserContext);
-  const changeUser = () => {
-    setUserType(userType === "individual" ? "business" : "individual");
+  const changeUserToBusiness = () => {
+    if (userType === "business") {
+      return;
+    }
+    setUserType("business");
+  };
+  const changeUserToIndevidual = () => {
+    if (userType === "individual") {
+      return;
+    }
+    setUserType("individual");
   };
   return (
     <Sheet>
@@ -30,7 +39,7 @@ const NavBar = () => {
                 className={`cursor-pointer ${
                   userType === "individual" ? "border-b-2 border-green-500" : ""
                 } px-2 text-xl`}
-                onClick={changeUser}
+                onClick={changeUserToIndevidual}
               >
                 Individual
               </p>
@@ -38,7 +47,7 @@ const NavBar = () => {
                 className={`cursor-pointer ${
                   userType === "business" ? "border-b-2 border-green-500" : ""
                 } px-2 text-xl`}
-                onClick={changeUser}
+                onClick={changeUserToBusiness}
               >
                 For Businesses
               </p>

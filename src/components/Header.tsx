@@ -5,17 +5,26 @@ import { useContext } from "react";
 
 const Header = () => {
   const { userType, setUserType } = useContext(UserContext);
-  const changeUser = () => {
-    setUserType(userType === "individual" ? "business" : "individual");
+  const changeUserToBusiness = () => {
+    if (userType === "business") {
+      return;
+    }
+    setUserType("business");
+  };
+  const changeUserToIndevidual = () => {
+    if (userType === "individual") {
+      return;
+    }
+    setUserType("individual");
   };
   return (
     <>
       {/* large screen */}
-      <div className="hidden lg:flex justify-between px-8 items-center">
+      <div className="hidden lg:flex justify-between px-8 items-center fixed w-full bg-black z-10">
         <div className="flex gap-8 items-center">
           <img src={Logo} alt="logo" className="cursor-pointer" />
           <p
-            onClick={changeUser}
+            onClick={changeUserToIndevidual}
             className={`cursor-pointer ${
               userType === "individual" ? "border-b-2 border-green-500" : ""
             } px-2 text-white`}
@@ -23,7 +32,7 @@ const Header = () => {
             For Individuals
           </p>
           <p
-            onClick={changeUser}
+            onClick={changeUserToBusiness}
             className={`cursor-pointer ${
               userType === "business" ? "border-b-2 border-green-500" : ""
             } px-2 text-white`}
