@@ -1,17 +1,18 @@
+import { Suspense, lazy, useContext } from "react";
 import "./App.css";
 import "@fontsource/poppins";
-import IndividualPage from "./pages/IndividualPage";
-import BusinessPage from "./pages/BusinessPage";
-import { useContext } from "react";
+const IndividualPage = lazy(() => import("./pages/IndividualPage"));
+const BusinessPage = lazy(() => import("./pages/BusinessPage"));
 import UserContext from "./context/UserContext";
+import Loader from "./components/Loader";
 
 function App() {
   const { userType } = useContext(UserContext);
 
   return (
-    <div className="">
+    <Suspense fallback={<Loader />}>
       {userType === "individual" ? <IndividualPage /> : <BusinessPage />}
-    </div>
+    </Suspense>
   );
 }
 

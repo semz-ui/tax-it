@@ -14,46 +14,67 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-        xs: "500px",
       },
     },
     extend: {
       colors: {
+        border: "hsl(var(--border))",
         first: "#5CB23ACC",
         second: "#048002CC",
         third: "#25A75C",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-    fontSize: {
-      sm: "0.8rem",
-      base: "1rem",
-      xl: "1.25rem",
-      "2xl": "1.563rem",
-      "3xl": "1.953rem",
-      "4xl": "2.441rem",
-      "5xl": "3.052rem",
-    },
-    fontWeight: {
-      thin: "100",
-      hairline: "100",
-      extralight: "200",
-      light: "300",
-      normal: "400",
-      medium: "500",
-      semibold: "600",
-      bold: "700",
-      extrabold: "800",
-      black: "900",
-    },
   },
-  plugins: [
-    function ({ addUtilities }) {
-      addUtilities({
-        ".no-scrollbar": {
-          "&::-webkit-scrollbar": "hidden",
-          "scrollbar-width": "none", // Modern browsers
-        },
-      });
-    },
-  ],
+  plugins: [require("tailwindcss-animate")],
 };

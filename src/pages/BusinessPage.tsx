@@ -13,7 +13,7 @@ const BusinessPage = () => {
         <Header />
         <BusinessBanner />
       </div>
-      <div className="mt-96 xl:flex xl:flex-col xl:items-center">
+      <div className="mt-48 sm:mt-96 xl:flex xl:flex-col xl:items-center">
         <div className="mx-0 xl:w-[1256px]">
           <Features data={BusinnessFeaturedData} />
           <GetStarted />

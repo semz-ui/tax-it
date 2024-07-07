@@ -11,7 +11,7 @@ const IndividualBanner = () => {
   return (
     <div className="flex flex-col md:flex-row h-[500px] md:h-[700px] ">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start xl:ml-48 md:ml-10 gap-5">
-        <h1 className="text-white text-center text-xl font-extrabold lg:text-6xl md:text-4xl md:text-left w-3/4 lg:w-[400px]">
+        <h1 className="text-white text-center font-bold  text-xl  md:text-4xl md:text-left w-3/4 lg:w-[400px]">
           Secure & seamless online transactions
         </h1>
         <p className="text-gray-400 text-center md:text-left text-sm md:text-base">
