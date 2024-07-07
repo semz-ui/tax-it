@@ -1,7 +1,7 @@
 import img from "@/assets/images/leftPanel.png";
 import appleStoreImage from "@/assets/images/Group.png";
 import gooplePlayImage from "@/assets/images/googleplay.png";
-import { Button } from "./Button";
+import { BannerButton, Button } from "./Button";
 
 const GetStarted2 = () => {
   return (
@@ -17,7 +17,11 @@ const GetStarted2 = () => {
           Stay on top of your business with our easy-to-use app
         </p>
         <div>
-          <Button title="Get Started" />
+          <BannerButton
+            title="Get Started"
+            bgColor="bg-gradient-to-r from-first to-second"
+            textColor="text-white"
+          />
         </div>
         <div className="mt-5 flex flex-wrap gap-2 ">
           <img src={appleStoreImage} className="w-24" />

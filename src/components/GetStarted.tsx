@@ -21,7 +21,7 @@ const GetStarted = () => {
             <div>
               {getStartedData.slice(0, 4).map((data: SingleGetStartedData) => (
                 <div key={data.id} className="flex flex-col gap-2 mb-6 mt-3">
-                  <h1 className="font-bold">{data.title}</h1>
+                  <h1 className="font-semibold">{data.title}</h1>
                   <p className="font-extralight text-sm text-gray-400">
                     {data.description}
                   </p>
@@ -51,7 +51,7 @@ const GetStarted = () => {
                   key={data.id}
                   className="flex flex-col gap-2 mb-6 lg:mt-3 lg:w-2/3"
                 >
-                  <h1 className="font-extrabold">{data.title}</h1>
+                  <h1 className="font-semibold">{data.title}</h1>
                   <p className="font-extralight text-sm text-gray-400">
                     {data.description}
                   </p>
@@ -60,7 +60,7 @@ const GetStarted = () => {
             </div>
           </div>
           <div className="w-full sm:w-1/2 mt-5 sm:mt-0">
-            <img src={img2} className="" />
+            <img src={img2} />
             <img src={img3} className="absolute right-0 -z-10 -mt-80" />
             <img
               src={img4}
