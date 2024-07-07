@@ -1,7 +1,7 @@
 import img from "@/assets/images/leftPanel.png";
 import appleStoreImage from "@/assets/images/Group.png";
 import gooplePlayImage from "@/assets/images/googleplay.png";
-import { BannerButton, Button } from "./Button";
+import { BannerButton } from "./Button";
 
 const GetStarted2 = () => {
   return (
