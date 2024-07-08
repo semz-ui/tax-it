@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       {/* large screen */}
-      <div className="hidden lg:flex justify-between px-8 py-2 items-center fixed w-full bg-black z-10">
+      <div className="hidden lg:flex justify-between px-8 py-2 items-center fixed w-full bg-black z-50">
         <div className="flex gap-8 items-center">
           <img src={Logo} alt="logo" className="cursor-pointer w-24" />
           <p
