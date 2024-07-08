@@ -3,21 +3,11 @@ import { Button } from "./Button";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import NavBar from "./NavBar";
+import useUserStatus from "../hooks/useUserStatus";
 
 const Header = () => {
-  const { userType, setUserType } = useContext(UserContext);
-  const changeUserToBusiness = () => {
-    if (userType === "business") {
-      return;
-    }
-    setUserType("business");
-  };
-  const changeUserToIndevidual = () => {
-    if (userType === "individual") {
-      return;
-    }
-    setUserType("individual");
-  };
+  const { userType } = useContext(UserContext);
+  const { changeUserToBusiness, changeUserToIndevidual } = useUserStatus();
   return (
     <>
       {/* large screen */}
