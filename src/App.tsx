@@ -3,12 +3,16 @@ import IndividualPage from "./pages/IndividualPage";
 import BusinessPage from "./pages/BusinessPage";
 import { useContext } from "react";
 import UserContext from "./context/UserContext";
+import Header from "./components/Header";
 
 function App() {
   const { userType } = useContext(UserContext);
 
   return (
-    <>{userType === "individual" ? <IndividualPage /> : <BusinessPage />}</>
+    <>
+      <Header />
+      {userType === "individual" ? <IndividualPage /> : <BusinessPage />}
+    </>
   );
 }
 

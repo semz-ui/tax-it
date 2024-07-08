@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <Sheet>
       <SheetTrigger className="text-white">
-        <GiHamburgerMenu cursor={"pointer"} size={20} />
+        <GiHamburgerMenu cursor={"pointer"} color="white" size={20} />
       </SheetTrigger>
       <SheetContent side={"top"} className="h-96">
         <SheetHeader>

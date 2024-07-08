@@ -2,6 +2,7 @@ import Logo from "@/assets/images/logo.svg";
 import { Button } from "./Button";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
+import NavBar from "./NavBar";
 
 const Header = () => {
   const { userType, setUserType } = useContext(UserContext);
@@ -49,6 +50,12 @@ const Header = () => {
         </div>
       </div>
       {/* mobile screen */}
+      <div className="flex justify-between h-20 px-3 lg:hidden fixed w-full z-50 top-0 bg-black">
+        <img src={Logo} alt="logo" className="cursor-pointer w-20" />
+        <div className="flex gap-8 items-center">
+          <NavBar />
+        </div>
+      </div>
     </>
   );
 };
